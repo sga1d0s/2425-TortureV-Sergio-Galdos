@@ -13,11 +13,37 @@ export const Game = {
   OVER: 2,
 }
 
-// elementos del juego
-
-export const Assets = {
+// identificador de tipo de Sprite (ID)
+export const SpriteID = {
   PLAYER: 0,
   SPIDER: 1,
   MONEY: 2,
-  LIFE,
+  LIFES: 3,
+  WALL: 4,
+  SCORE: 5,
+}
+
+// velocidad del juevo
+export const FPS = 30
+
+// identificador de estado de sprite (dirección)
+export const State = {
+  // estados PLAYER
+  UP: 0,
+  LEFT: 1,
+  DOWN: 2,
+  RIGHT: 3,
+}
+
+// diferentes TileSets
+export const Tile = {
+  SIZE_16: 0,
+}
+
+// identificador de cada tecla
+export const Key = {
+  UP: 38,
+  DOWN: 40,
+  RIGHT: 39,
+  LEFT: 37,
 }

@@ -1,11 +1,9 @@
-import { Game } from "./constants";
+import { Game } from "./constants.js"
 
 export default {
   // acceso a canvas y al context
   canvas: {},
   ctx: {},
-  canvasUHD: {},
-  ctxUHD: {},
 
   // estado del juego
   gameState: Game.INVALID,
@@ -19,12 +17,41 @@ export default {
   // tiempo de ciclo objetivo (seconds, constante)
   frameTimeObj: 0,
 
+  // array que guarda la lista de elementos a cargar
+  assetsToLoad: [],
+
+  // variable que indica el número de elementos cargados
+  assetsLoaded: 0,
+
   // objeto que guarda los datos de imagen (tileSet)
-  tileSets: [
+  tileSets: [],
+
+  // objeto que guarda los datos de los sprites
+  //////////////// assetsToLoad
+  sprites: [
     "\u{1F474}",
     "\u{1F577}",
     "\u{1F4B5}",
     "\u{1F49A}",
     "\u2B1C",
+    "\u2B1C",
+    "SCORE"
   ],
+
+  cycleRealTime: 0,
+
+  // datos de nivel
+  level: {},
+
+  // tiempo de juego
+  gameTime: -1,
+
+  // temporización nivel
+  levelTime: {},
+
+  // objeto que guarda el estado de la tecla pulsada
+  action: {},
+
+  // life
+  life: 0,
 } 
