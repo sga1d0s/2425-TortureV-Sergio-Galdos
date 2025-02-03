@@ -6,3 +6,9 @@ canvas {
   width: 1152;
   height: 768px;
 }
+
+
+@font-face {
+  font-family: emulogic;
+  src: url("../fonts/emulogic.ttf");
+}
