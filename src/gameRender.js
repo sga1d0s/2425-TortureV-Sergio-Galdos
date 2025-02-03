@@ -35,13 +35,17 @@ function drawGame() {
 
 // función que dibuja el mapa
 function renderMap() {
-  // const brickSize = globals.level.imageSet.gridSize
   const brickSize = 16
+  // const brickSize = 16
   const levelData = globals.level.data
+
+  console.log(levelData);
 
   // dibujamos el mapa
   const num_fil = levelData.length
   const num_col = levelData[0].length
+
+  console.log(globals.tileSets);
 
   for (let i = 0; i < num_fil; i++) {
     for (let j = 0; j < num_col; j++) {
@@ -51,7 +55,7 @@ function renderMap() {
       const yPos = i * brickSize
 
       // dibujar el nuevo fotograma del sprite en la posicion adecuada
-      globals.ctx.drawImage(
+      globals.ctx.fillText(
         globals.tileSets[Tile.SIZE_16],
         xTile, ytile,
         brickSize, brickSize,

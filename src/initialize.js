@@ -50,23 +50,8 @@ function initVars() {
   globals.gameState = Game.PLAYING
 }
 
-// carga de activos: TILEMAPS, IMAGES, SOUNDS
-function loadAssets() {
-
-  let tileSet;
-  tileSet = globals.sprites
-
-  // tileSet.addEventListener("load", loadHandler, false)
-  globals.tileSets.push(tileSet)
-  globals.assetsToLoad.push(tileSet)
-
-  // tileSet.addEventListener("load", loadHandler, false)
-
-  globals.assetsToLoad = globals.sprites
-}
-
 // funcion que se llama cada vez que se carga un archivo
-function loadHandler() {
+function loadAssets() {
   globals.assetsToLoad = globals.sprites
 
   globals.assetsLoaded++
@@ -156,15 +141,23 @@ function initPirate() {
   const initTimeToChangeDirection = Math.floor(Math.random() * 3) + 1
 
   // crear nuestro sprite
-  const pirate = new Pirate(SpriteID.PIRATE, State.RIGHT_2, 100, 100, imageSet, frames, physics, initTimeToChangeDirection, hitBox)
+  // const pirate = new Pirate(SpriteID.PIRATE, State.RIGHT_2, 100, 100, imageSet, frames, physics, initTimeToChangeDirection, hitBox)
 
   // añadir el pirate al array de sprites
   globals.sprites.push(pirate)
 }
 
 function initLevel() {
-  // crear las propiedades de las imagenes: initFil, initCol, xSize, ySize, gridSize, xOffset, yOffset
-  const imageSet = new ImageSet(0, 0, 32, 32, 32, 0, 0)
+  // crear las propiedades de las imagenes
+  const imageSet = new ImageSet(
+    /* initFil */ 6,
+    /* initCol */ 0,
+    /* xSize */ 16,
+    /* ySize */ 16,
+    /* gridSize */ 16,
+    /* xOffset */ 0,
+    /* yOffset */ 0
+  )
 
   // creamos y guardamos nuestro nivel
   globals.level = new Level(level1, imageSet)

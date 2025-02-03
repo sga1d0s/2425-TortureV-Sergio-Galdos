@@ -17,7 +17,7 @@ function init() {
   initHTMLElements()
 
   // cargamos todos los activos: TILEMAPS, IMAGES, SOUNDS
-  // loadAssets()
+  //loadAssets()
 
   // iniciar los sprites
   // initSprites()
