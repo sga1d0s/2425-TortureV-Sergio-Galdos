@@ -29,20 +29,8 @@ export default {
     "\u2B1C",
   ],
 
-  textBlocks: [
-    "\u2B1C",
-    "",
-  ],
-
   // objeto que guarda los datos de los sprites
   sprites: [
-    "\u{1F474}",
-    "\u{1F577}",
-    "\u{1F4B5}",
-    "\u{1F49A}",
-  ],
-
-  textCharacters: [
     "\u{1F474}",
     "\u{1F577}",
     "\u{1F4B5}",

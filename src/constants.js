@@ -23,6 +23,17 @@ export const SpriteID = {
   SCORE: 5,
 }
 
+// identificador de tipo de Sprite Image
+export const SpriteImage = {
+  PLAYER: "\u{1F474}",
+  SPIDER: "\u{1F577}",
+  MONEY: "\u{1F4B5}",
+  LIFES: "\u{1F49A}",
+  WALL: "\u2B1C",
+  EMPTY: "",
+  SCORE: "score",
+}
+
 // velocidad del juevo
 export const FPS = 30
 

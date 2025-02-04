@@ -1,5 +1,5 @@
 import globals from "./globals.js"
-import { Game, FPS, SpriteID, State, } from "./constants.js"
+import { Game, FPS, SpriteID, State, SpriteImage, } from "./constants.js"
 import ImageSet from "./ImageSet.js"
 import Frames from "./Frames.js"
 import { Level, level1 } from "./Level.js"
@@ -78,8 +78,7 @@ function initTimers() {
 
 function initSprites() {
 
-  // initWall()
-  // initPlayer()
+  initPlayer()
   // initSpider()
   // initMoney()
   // initLife()
@@ -93,19 +92,27 @@ function initEvents() {
 
 function initPlayer() {
   // crear las propiedades de las imagenes: initFil, initCol, xSize, ySize, gridSize, xOffset, yOffset
-  const imageSet = new ImageSet(0, 0, 44, 57, 64, 10, 6)
+  // const imageSet = new ImageSet(0, 0, 44, 57, 64, 10, 6)
+  const imageSet = SpriteImage.PLAYER
 
   // crear los datos de la animación. 8 frames / state
-  const frames = new Frames(8, 5)
+  // const frames = new Frames(8, 5)
 
   // crear nuestro objeto physics con vLimit 40 pixels por segundo
   const physics = new Physics(40)
 
   // crear objeto hitbox
-  const hitBox = new HitBox(16, 51, 14, 5)
+  const hitBox = new HitBox(16, 16, 0, 0)
 
   // crear nuestro sprite
-  const player = new Sprite(SpriteID.PLAYER, State.STILL_RIGHT, 100, 70, imageSet, frames, physics, hitBox)
+  const player = new Sprite(
+    /* ID */ SpriteID.PLAYER, 
+    /* state */ State.UP, 
+    /* xPos */ 0, 
+    /* yPos */ 0, 
+    /* imageSet */ imageSet, 
+    /* physics */ physics, 
+    /* hitbox */ hitBox)
 
   // añadir el player al array de sprites
   globals.sprites.push(player)
