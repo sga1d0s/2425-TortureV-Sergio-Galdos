@@ -150,7 +150,7 @@ function initPirate() {
 function initLevel() {
   // crear las propiedades de las imagenes
   const imageSet = new ImageSet(
-    /* initFil */ 6,
+    /* initFil */ 0,
     /* initCol */ 0,
     /* xSize */ 16,
     /* ySize */ 16,

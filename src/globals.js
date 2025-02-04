@@ -24,18 +24,29 @@ export default {
   assetsLoaded: 0,
 
   // objeto que guarda los datos de imagen (tileSet)
-  tileSets: [],
+  tileSets: [
+    "",
+    "\u2B1C",
+  ],
+
+  textBlocks: [
+    "\u2B1C",
+    "",
+  ],
 
   // objeto que guarda los datos de los sprites
-  //////////////// assetsToLoad
   sprites: [
     "\u{1F474}",
     "\u{1F577}",
     "\u{1F4B5}",
     "\u{1F49A}",
-    "\u2B1C",
-    "\u2B1C",
-    "SCORE"
+  ],
+
+  textCharacters: [
+    "\u{1F474}",
+    "\u{1F577}",
+    "\u{1F4B5}",
+    "\u{1F49A}",
   ],
 
   cycleRealTime: 0,

@@ -48,7 +48,7 @@ function updateSprite(sprite) {
 
     // caso jugador
     case SpriteID.PLAYER:
-      updatePlayer(sprite)
+      // updatePlayer(sprite)
       break
 
     // caso pirata
