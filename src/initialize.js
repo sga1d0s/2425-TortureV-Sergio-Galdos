@@ -92,8 +92,15 @@ function initEvents() {
 
 function initPlayer() {
   // crear las propiedades de las imagenes: initFil, initCol, xSize, ySize, gridSize, xOffset, yOffset
-  // const imageSet = new ImageSet(0, 0, 44, 57, 64, 10, 6)
-  const imageSet = SpriteImage.PLAYER
+    // crear las propiedades de las imagenes
+    const imageSet = new ImageSet(
+      /* image */ 0,
+      /* xSize */ 16,
+      /* ySize */ 16,
+      /* gridSize */ 16,
+      /* xOffset */ 0,
+      /* yOffset */ 0
+    )
 
   // crear los datos de la animación. 8 frames / state
   // const frames = new Frames(8, 5)
@@ -157,8 +164,7 @@ function initPirate() {
 function initLevel() {
   // crear las propiedades de las imagenes
   const imageSet = new ImageSet(
-    /* initFil */ 0,
-    /* initCol */ 0,
+    globals.textTileSets,
     /* xSize */ 16,
     /* ySize */ 16,
     /* gridSize */ 16,
